@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 function h($value){
     return htmlspecialchars($value, ENT_QUOTES);
 }
@@ -17,6 +18,20 @@ $userdate = $name.",".$mail;
 $file = fopen("data/data.txt","a");	// ファイル読み込み
 fwrite($file, $userdate."\r\n");// 例　yamazaki , test@test.jp
 fclose($file);
+=======
+$flg = 0;
+$name = $_POST["name"];
+$mail = $_POST["mail"];
+
+if($name==""){
+    $name = "未入力です";
+    $flg = 1;
+}
+if($mail==""){
+    $mail = "未入力です";
+    $flg = 1;
+}
+>>>>>>> master
 
 
 ?>
@@ -26,8 +41,13 @@ fclose($file);
 <title>POST（受信）</title>
 </head>
 <body>
+<<<<<<< HEAD
 お名前：<?php echo h($name); ?>
 EMAIL：<?php echo h($mail); ?>
+=======
+お名前：<?php echo $name; ?>
+EMAIL：<?php echo $mail; ?>
+>>>>>>> master
 <?php 
     if($flg == 0){ 
 ?>

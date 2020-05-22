@@ -1,10 +1,17 @@
 <?php
 //文字作成
+<<<<<<< HEAD
 
 $str = date("Y-m-d H:i:s");
 //File書き込み
 $file = fopen("data/data.txt","a");	// ファイル読み込み
 fwrite($file, $str."\r\n");
+=======
+$str = date("Y-m-d H:i:s");
+//File書き込み
+$file = fopen("data/data.txt","a");	// ファイル読み込み
+fwrite($file, $str."\n");
+>>>>>>> master
 fclose($file);
 ?>
 
